@@ -7,6 +7,9 @@ import { NewchildComponent } from './newchild/newchild.component';
 import { ChildComponent } from './child/child.component';
 import { StdformComponent } from './stdform/stdform.component';
 import { TableformComponent } from './tableform/tableform.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProdutinfoComponent } from './produtinfo/produtinfo.component';
+
 
 
 @NgModule({
@@ -16,11 +19,16 @@ import { TableformComponent } from './tableform/tableform.component';
     ChildComponent,
     StdformComponent,
     TableformComponent,
+    ProdutinfoComponent
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  
+  
     
     
     

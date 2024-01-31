@@ -4,3 +4,11 @@ export interface Istd{
     email:string
     contact:number
 }
+
+export type cate='product'|'catlog'
+
+export interface Iproduct{
+    productname:string,
+    productinfo:string,
+    categery:cate
+}

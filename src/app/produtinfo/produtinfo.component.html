@@ -1,4 +1,4 @@
-<!-- <div class="form-group">
+<div class="form-group">
     <label for="name">product name</label>
     <input type="text" class="form-control" [(ngModel)]="productname">
 </div>
@@ -6,7 +6,28 @@
     <label for="name">productinfo</label>
     <textarea type="text"  [(ngModel)]="productinfo" class="form-control"></textarea>
 </div>
-<div class="form-group">
-    <button class="btn btn-primary" (click)="onproduct()">btn</button>
+<div class="d-flex justify-content-between">
+    <button class="btn btn-primary" (click)="onproduct('product')">produt</button>
+    <button class="btn btn-primary" (click)="onproduct('catlog')">catlog</button>
+    
+    <!-- <button class="btn btn-primary" (click)="onproduct('product')">edt</button>
+    <button class="btn btn-primary" (click)="onproduct('catlog')">add</button> -->
 </div>
- -->
+
+
+        <div class="card my-4" *ngFor="let newcard of arry">
+            <div class="card-header" [ngClass]="{'bg-success':newcard.categery==='product',
+            'bg-primary':newcard.categery==='catlog'}">
+             <h1>
+                {{newcard.productname}}
+             </h1>
+            </div>
+            <div class="cardbody">
+                {{newcard.productinfo}}
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-primary">edit</button>
+            <button class="btn btn-danger">delit</button>
+            </div>
+            </div>
+    
